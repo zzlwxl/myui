@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <router-view></router-view>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script>0
+import { ref,provide } from 'vue'
+import router from './router'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+  },
+  setup(props) {
+     const width = document.documentElement.clientWidth
+     let asideVisible = ref(width <= 500 ? false : true)
+     provide('asideVisble',asideVisible)
+     router.afterEach(()=>{
+       if(width<=500){
+         asideVisible.value = false
+       }
+     })
+   }
 }
 </script>
