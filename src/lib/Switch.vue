@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 当value为true，button的class就是checked -->
-    <button :class="{ checked: value }" @click="toggle"><span></span></button>
+    <button class="zzl-switch" :class="{ 'zzl-checked': value }" @click="toggle"><span></span></button>
     <div>{{ value }}</div>
   </div>
 </template>
@@ -22,10 +22,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.zzl-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -45,7 +45,7 @@ button {
 &:focus {
   outline: none;
 }
-&.checked {
+&.zzl-checked {
   background: rgb(0, 229, 255);
   > span {
     left: calc(100% - #{$h2} - 2px);
