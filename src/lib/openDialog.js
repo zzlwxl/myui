@@ -13,7 +13,7 @@ export function openDialog(options){
                 // 渲染Dialog
                 Dialog,
                 
-                // 在渲染Dialog的时候，给他传一个visible:true值
+                // 在渲染Dialog的时候，给他传一个visible:true值,ok,cancel
                 // 监听 update:visible，拿到更新visible时传的值
                 {visible:true,'onUpdate:visible':(newVisible)=>{
                 if(newVisible === false){
