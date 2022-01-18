@@ -6,13 +6,14 @@ import Button from '../components/Button.vue'
 import Dialog from '../components/Dialog.vue'
 import Tabs from '../components/Tabs.vue'
 import Switch from '../components/Switch.vue'
-import Welcome from '../components/Welcome.vue'
+import Info from '../views/Info.vue'
 
 const history = createWebHashHistory()
 const routes = [
     {path:'/',component:Home},
     {path:'/doc',component:Doc,children:[
-        {path:'',component:Welcome},
+        {path:'',redirect:'/doc/info'},
+        {path:'info',component:Info},
         {path:'switch',component:Switch},
         {path:'button',component:Button},
         {path:'dialog',component:Dialog},

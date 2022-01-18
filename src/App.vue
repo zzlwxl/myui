@@ -2,7 +2,7 @@
   <router-view></router-view>
 </template>
 
-<script>0
+<script>
 import { ref,provide } from 'vue'
 import router from './router'
 export default {

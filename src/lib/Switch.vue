@@ -2,7 +2,6 @@
   <div>
     <!-- 当value为true，button的class就是checked -->
     <button class="zzl-switch" :class="{ 'zzl-checked': value }" @click="toggle"><span></span></button>
-    <div>{{ value }}</div>
   </div>
 </template>
 
@@ -10,6 +9,7 @@
 export default {
   props: {
     value: Boolean,
+    default:false
   },
   setup(props, context) {
     function toggle() {

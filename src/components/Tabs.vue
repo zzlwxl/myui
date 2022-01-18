@@ -1,26 +1,45 @@
 <template>
   <div>Tabs示例</div>
-  <h1>示例1</h1>
-  <Tabs v-model:selected="x">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2dddddd">内容2</Tab>
-    <Tab title="导航3">内容3</Tab>
-  </Tabs>
+  <Demo :component="{title:'常规用法',code:tabs1 ,ui:'Tabs1Demo'}"></Demo>
+  <Attributes :columns="columns" :data="data"></Attributes>
 </template>
 
 <script>
 import Tabs from '../lib/Tabs.vue'
 import Tab from '../lib/Tab.vue'
-import {ref} from 'vue'
+import Tabs1Demo from './Tabs1.demo.vue'
+import Demo from './Demo.vue'
+import {tabs1} from '../code/code.js'
+import { columns } from '../code/columns.js'
+import Attributes from './Attributes.vue'
+import { ref } from 'vue'
 export default {
   components:{
     Tabs,
-    Tab
+    Tab,
+    Tabs1Demo,
+    Demo,
+    Attributes
   },
   setup(){
-    const x = ref('导航1')
+    const data = ref([
+      {
+        params: 'title',
+        desc: '导航标题',
+        type: 'string',
+        select: '-',
+        default: '-',
+      },
+      {
+        params: 'selected',
+        desc: '所选择的导航标签',
+        type: 'string',
+        select: '-',
+        default: '-',
+      }
+    ])
     return{
-      x
+      Tabs1Demo,tabs1,columns,data
     }
   }
 }

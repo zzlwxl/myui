@@ -1,0 +1,6 @@
+export const switch1 = '<Switch v-model:value="bool" />'
+export const button1 = '<Button level="main">主要按钮</Button>\n'+'<Button level="wran">警告ß按钮</Button>\n'+'<Button disabled>禁用按钮</Button>'
+export const button2 = '<Button size="big">大大大</Button>\n'+'<Button>普普通</Button>\n'+'<Button size="small">小小小</Button>'
+export const button3 = '<Button loading>加载中...</Button>\n'+'<Button>加载完毕</Button>'
+export const diglog1 = '<Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"></Dialog>'
+export const tabs1 = '<Tabs v-model:selected="x">\n'+'  <Tab title="导航1">内容1</Tab>\n'+'  <Tab title="导航2">内容2</Tab>\n'+'  <Tab title="测试导航">内容3</Tab>\n'+'</Tabs>'

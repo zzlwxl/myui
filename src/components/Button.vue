@@ -1,72 +1,66 @@
 <template>
-  <h1>示例1</h1>
-  <div>
-    <Button>您好</Button>
-    <Button theme="button">您好</Button>
-    <Button theme="link">您好</Button>
-    <Button theme="text">您好</Button>
-  </div>
-  <h1>示例2</h1>
-  <div>
-    <div>
-      <Button size="big">大大大</Button>
-      <Button>普普通</Button>
-      <Button size="small">小小小</Button>
-    </div>
-    <div>
-      <Button theme="link" size="big">大大大</Button>
-      <Button theme="link">普普通</Button>
-      <Button size="small" theme="link">小小小</Button>
-    </div>
-    <div>
-      <Button size="big" theme="text">大大大</Button>
-      <Button theme="text">普普通</Button>
-      <Button size="small" theme="text">小小小</Button>
-    </div>
-  </div>
-  <h1>示例3</h1>
-  <div>
-    <div>
-      <Button level="main">主要按钮</Button>
-      <Button>普通按钮</Button>
-      <Button level="danger">危险按钮</Button>
-    </div>
-    <div>
-      <Button theme="link" level="main">主要链接按钮</Button>
-      <Button theme="link">普通链接按钮</Button>
-      <Button theme="link" level="danger">危险链接按钮</Button>
-    </div>
-    <div>
-      <Button theme="text" level="main">主要文字按钮</Button>
-      <Button theme="text">普通文字按钮</Button>
-      <Button theme="text" level="danger">危险文字按钮</Button>
-    </div>
-  </div>
-  <h1>示例4</h1>
-  <div>
-    <Button disabled>禁用按钮</Button>
-    <Button theme="link" disabled>禁用链接按钮</Button>
-    <Button theme="text" disabled>禁用按钮</Button>
-  </div>
-  
-  <h1>示例5</h1>
-  <div>
-    <Button loading>加载中...</Button>
-    <Button>加载完毕</Button>
-  </div>
-  
+  <Demo :component="{ title: '常规用法', code: button1, ui: 'Button1Demo' }"></Demo>
+  <Demo :component="{ title: '尺寸大小', code: button2, ui: 'Button2Demo' }"></Demo>
+  <Demo :component="{ title: '加载中', code: button3, ui: 'Button3Demo' }"></Demo>
+  <Attributes :columns="columns" :data="data"></Attributes>
 </template>
 
 <script>
 import Button from '../lib/Button.vue'
+import Demo from './Demo.vue'
+import Button1Demo from './Button1.demo.vue'
+import Button2Demo from './Button2.demo.vue'
+import Button3Demo from './Button3.demo.vue'
+import { button1, button2, button3 } from '../code/code.js'
+import { columns } from '../code/columns.js'
+import Attributes from './Attributes.vue'
+import { ref } from 'vue'
 export default {
-  components: { Button },
+  components: { Button, Demo, Attributes },
   setup() {
     function onClick() {
       console.log('ho')
     }
+    const data = ref([
+      {
+        params: 'level',
+        desc: '按钮颜色',
+        type: 'string',
+        select: 'main / warn / danger ',
+        default: 'default',
+      },
+      {
+        params: 'size',
+        desc: '尺寸大小',
+        type: 'string',
+        select: 'big / small',
+        default: 'default',
+      },
+      {
+        params: 'loading',
+        desc: '是否加载',
+        type: 'Boolean',
+        select: 'false / true',
+        default: 'false',
+      },
+      {
+        params: 'disabled',
+        desc: '是否禁用',
+        type: 'Boolean',
+        select: 'false / true',
+        default: 'false',
+      },
+    ])
     return {
       onClick,
+      Button1Demo,
+      button1,
+      Button2Demo,
+      button2,
+      Button3Demo,
+      button3,
+      columns,
+      data,
     }
   },
 }

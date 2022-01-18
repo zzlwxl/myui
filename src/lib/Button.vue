@@ -17,11 +17,9 @@ export default {
     },
     size: {
       type: String,
-      default: 'normal',
     },
     level: {
       type: String,
-      default: 'normal',
     },
     disabled: {
       type: Boolean,
@@ -59,6 +57,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
+$yellow:#FFA000;
 .zzl-button {
   box-sizing: border-box;
   height: $h;
@@ -81,8 +80,6 @@ $grey: grey;
   &:focus {
     color: $blue;
     border-color: $blue;
-  }
-  &:focus {
     outline: none;
   }
   &::-moz-focus-inner {
@@ -135,6 +132,16 @@ $grey: grey;
       &:focus {
         background: darken($red, 10%);
         border-color: darken($red, 10%);
+      }
+    }
+    &.zzl-level-warn {
+      background: $yellow;
+      border-color: $yellow;
+      color: white;
+      &:hover,
+      &:focus {
+        background: darken($yellow, 10%);
+        border-color: darken($yellow, 10%);
       }
     }
   }
