@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import Button from '../lib/Button.vue'
-import Demo from './Demo.vue'
+import Button from '../../lib/Button.vue'
+import Demo from '../Demo.vue'
 import Button1Demo from './Button1.demo.vue'
 import Button2Demo from './Button2.demo.vue'
 import Button3Demo from './Button3.demo.vue'
-import { button1, button2, button3 } from '../code/code.js'
-import { columns } from '../code/columns.js'
-import Attributes from './Attributes.vue'
+import { button1, button2, button3 } from '../../code/code.js'
+import { columns } from '../../code/columns.js'
+import Attributes from '../Attributes.vue'
 import { ref } from 'vue'
 export default {
   components: { Button, Demo, Attributes },

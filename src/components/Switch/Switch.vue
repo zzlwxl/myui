@@ -8,13 +8,13 @@
 </template>
 
 <script>
-import Switch from '../lib/Switch.vue'
+import Switch from '../../lib/Switch.vue'
 import Switch1Demo from './Switch1.demo.vue'
-import Button from '../lib/Button.vue'
-import Demo from './Demo.vue'
-import {switch1} from '../code/code.js'
-import { columns } from '../code/columns.js'
-import Attributes from './Attributes.vue'
+import Button from '../../lib/Button.vue'
+import Demo from '../Demo.vue'
+import {switch1} from '../../code/code.js'
+import { columns } from '../../code/columns.js'
+import Attributes from '../Attributes.vue'
 import { ref } from 'vue'
 export default {
   components: {

@@ -179,12 +179,6 @@ $yellow:#FFA000;
       }
     }
   }
-  &.zzl-theme-link, &.zzl-theme-text {
-    &[disabled] {
-      cursor: not-allowed;
-      color: $grey;
-    }
-  }
   > .zzl-loading{
     width: 14px;
     height: 14px;

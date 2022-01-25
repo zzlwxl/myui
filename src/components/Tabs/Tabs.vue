@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import Tabs from '../lib/Tabs.vue'
-import Tab from '../lib/Tab.vue'
+import Tabs from '../../lib/Tabs.vue'
+import Tab from '../../lib/Tab.vue'
 import Tabs1Demo from './Tabs1.demo.vue'
-import Demo from './Demo.vue'
-import {tabs1} from '../code/code.js'
-import { columns } from '../code/columns.js'
-import Attributes from './Attributes.vue'
+import Demo from '../Demo.vue'
+import {tabs1} from '../../code/code.js'
+import { columns } from '../../code/columns.js'
+import Attributes from '../Attributes.vue'
 import { ref } from 'vue'
 export default {
   components:{

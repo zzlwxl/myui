@@ -26,6 +26,7 @@
         <h3>基于 JavaScript </h3>
         <p>我要开始计划学Ts了</p>
       </li>
+      
       <li>
         <svg>
           <use xlink:href="#icon-idea"></use>

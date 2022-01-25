@@ -12,16 +12,19 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">Dialog 对话框</router-link>
           </li>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/radio">Radio 单选框</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/switch">Switch 开关</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/button">Button 按钮</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/tabs">Tabs 标签页</router-link>
           </li>
         </ol>
       </aside>
@@ -50,6 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$activeColor:#40a9ff;
 .layout {
   display: flex;
   flex-direction: column;
@@ -77,7 +81,7 @@ export default {
   }
 }
 aside {
-  background: lightblue;
+  background: #40a9ff;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -89,16 +93,20 @@ aside {
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
+    color: #fff;
   }
   > ol {
     > li {
       font-size: 14px;
+      color: #fff;
       >a{
         display: block;
         padding: 4px 16px ;
       }
       .router-link-active{
         background-color: #fff;
+        color: $activeColor;
+        border-radius: (0 10% 10% 0);
       }
     }
   }
