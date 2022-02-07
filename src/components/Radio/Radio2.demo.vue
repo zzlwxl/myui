@@ -5,12 +5,11 @@
 
 <script>
 import Radio from '../../lib/Radio.vue';
-import Dialog from '../../lib/Dialog.vue'
 import {ref} from 'vue';
 import {openDialog} from '../../lib/openDialog.js'
 
 export default {
-  components:{Radio,Dialog},
+  components:{Radio},
   setup(){
     const labelVal = ref('1')
     function showDialog(){

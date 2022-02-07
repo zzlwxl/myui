@@ -36,7 +36,6 @@ export default {
         return props.value
       },
       set(value){
-        console.log('点击了')
         context.emit('update:value',value)
       }
     })

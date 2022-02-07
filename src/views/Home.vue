@@ -24,7 +24,7 @@
           <use xlink:href="#icon-js"></use>
         </svg>
         <h3>基于 JavaScript </h3>
-        <p>我要开始计划学Ts了</p>
+        <p>还是要学习TypeScript的</p>
       </li>
       
       <li>
